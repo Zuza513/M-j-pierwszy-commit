@@ -1,0 +1,28 @@
+#container {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.cardText {
+    text-align: center;
+    height: 300px;
+    width: 300px;
+}
+
+.nagl {
+    text-align: center;
+    margin: 10px;
+}
+
+.cards {
+    background-color: white;
+     display: flex;
+     justify-content: space-evenly;
+     height: 300px;
+     width: 300px;
+     align-items: center;
+     flex-wrap: wrap;
+}
+
