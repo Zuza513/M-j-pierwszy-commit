@@ -1,14 +1,14 @@
 #container {
     background-color: white;
     display: flex;
-    justify-content: center;
-    
+    justify-content: center;    
 }
 
 .cardText {
     text-align: center;
     height: 300px;
     width: 300px;
+    flex-wrap: wrap;
 }
 
 .nagl {
