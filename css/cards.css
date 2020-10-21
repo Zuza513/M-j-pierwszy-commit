@@ -1,14 +1,16 @@
 #container {
-    background-color: white;
+    margin-top: 300px;
     display: flex;
-    justify-content: center;    
-}
+    justify-content: space-evenly;  
+    flex-wrap: wrap;
+}  
+
 
 .cardText {
     text-align: center;
     height: 300px;
     width: 300px;
-    flex-wrap: wrap;
+
 }
 
 .nagl {
@@ -17,12 +19,30 @@
 }
 
 .cards {
-    background-color: white;
      display: flex;
-     justify-content: space-evenly;
      height: 300px;
-     width: 300px;
+     width: 550px;
+     flex-direction: column;
      align-items: center;
-     flex-wrap: wrap;
 }
 
+
+.cardIconBackground {
+    max-width: 150px;
+    max-height: 150px;
+    padding: 30px;
+    background-color: #04bbe9;
+    border-radius: 50%;
+}
+
+.cardIcon {
+max-width: 100px;
+}
+
+.zoom {
+    transition: transform .2s;
+}
+
+.zoom :hover {
+    transform: scale(1.3);
+}
