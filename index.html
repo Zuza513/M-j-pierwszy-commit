@@ -12,9 +12,20 @@
         <link rel="stylesheet" href="css/common.css">
         <link rel="stylesheet" href="css/cards.css">
         <link rel="stylesheet" href="css/gallery.css">
+        <link rel="stylesheet" href="css/contact.css">
 
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+
+        <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMIVxgg1XGIzriZQft2X2rx1-N_mF2CM0&callback=initMap&libraries=&v=weekly"
+        defer
+        >
+        </script>
+
+        <script src="js/map.js"></script>
+        <script src="js/modal.js"></script>
+
     </head>
     <body>
         <header>
@@ -101,27 +112,49 @@
             </section>
 
             <section id="gallery">
-                <img src="images/gallery/gallery1.jpg" class="galleryImage">
-                <img src="images/gallery/gallery2.jpg" class="galleryImage">
-                <img src="images/gallery/gallery3.jpg" class="galleryImage">
-                <img src="images/gallery/gallery4.jpg" class="galleryImage">
-                <img src="images/gallery/gallery5.jpg" class="galleryImage">
-                <img src="images/gallery/gallery6.jpg" class="galleryImage">
-                <img src="images/gallery/gallery7.jpg" class="galleryImage">
-                <img src="images/gallery/gallery8.jpg" class="galleryImage">
-                <img src="images/gallery/gallery9.jpg" class="galleryImage">
-                <img src="images/gallery/gallery10.jpg" class="galleryImage">
-                <img src="images/gallery/gallery11.jpg" class="galleryImage">
-                <img src="images/gallery/gallery12.jpg" class="galleryImage">
-
+                <div id="modal">
+                    <div id="modalContent">
+                        <div id="modalImgContainer">
+                            <button class="modalButton" onclick="onClickLeft()"><</button>
+                            <img src="" id="modalImg" alt="modalImg">
+                            <button class="modalButton" onclick="onClickRight()">></button>
+                        </div>
+                        <button id="exitModalButton" class="modalButton" onclick="onClickExit()">x</button>
+                    </div>
+                </div>
+                <img src="images/gallery/gallery1.jpg" class="galleryImage" onclick="onClickGalleryImage(this.src)">
+                <img src="images/gallery/gallery2.jpg" class="galleryImage" onclick="onClickGalleryImage(this.src)">
+                <img src="images/gallery/gallery3.jpg" class="galleryImage" onclick="onClickGalleryImage(this.src)">
+                <img src="images/gallery/gallery4.jpg" class="galleryImage" onclick="onClickGalleryImage(this.src)">
+                <img src="images/gallery/gallery5.jpg" class="galleryImage" onclick="onClickGalleryImage(this.src)">
+                <img src="images/gallery/gallery6.jpg" class="galleryImage" onclick="onClickGalleryImage(this.src)">
+                <img src="images/gallery/gallery7.jpg" class="galleryImage" onclick="onClickGalleryImage(this.src)">
+                <img src="images/gallery/gallery8.jpg" class="galleryImage" onclick="onClickGalleryImage(this.src)">
+                <img src="images/gallery/gallery9.jpg" class="galleryImage" onclick="onClickGalleryImage(this.src)">
+                <img src="images/gallery/gallery10.jpg" class="galleryImage" onclick="onClickGalleryImage(this.src)">
+                <img src="images/gallery/gallery11.jpg" class="galleryImage" onclick="onClickGalleryImage(this.src)">
+                <img src="images/gallery/gallery12.jpg" class="galleryImage" onclick="onClickGalleryImage(this.src)">
             </section>
 
-            <section id="conact">
+            <section id="contact">
                 <div id="contactPanel">
                     <div class="contactPanelColumn">
-                        <h2>Napisz do nas!</h2>
-                        <h4> Nasza obsługa techniczna dostępna jest 24 godziny na dobę, aby odpowiedzieć na każde <b>Twoje</b> pytanie.</h4>
+                        <div id="map"></div>
                     </div>
+                    <div class="contactPanelColumn">
+                        <h2>Napisz do nas!</h2>
+                        <h4> Nasza obsługa techniczna dostępna jest 24 godziny na dobę,
+                             aby odpowiedzieć na każde <b>Twoje</b> pytanie.</h4>
+                             <form action="" id="contactForm">
+                                 <div id="contactFormInputGroup">
+                                     <input type="text" name="name" id="contactFormInputName" placeholder="Imię" class="contactFormInput">
+                                     <input type="text" name="email" id="contactFormInputEmail" placeholder="Email" class="contactFormInput">
+                                     <input type="text" name="subject" id="contactFormInputSubject" placeholder="Tytuł" class="contactFormInput">
+                                 </div>
+                                 <textarea id="contactFormInputArea" name="area" rows="8" cols="50" placeholder="Twoja wiadomość"></textarea>
+                                 <input type="submit" value="Wyślij" id="contactFormSubmit" class="btn btnPrimary">
+                             </form>
+                </div>
                 </div>
             </section>
         </main>
